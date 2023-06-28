@@ -1,3 +1,5 @@
+# Класс оконного приложения
+
 import cv2
 import qimage2ndarray
 import torch
@@ -37,7 +39,7 @@ class MainWindow(QtWidgets.QMainWindow, MainWindowUI):
                                     channels_dim=64,
                                     out_channels=3)
         try:
-            generator_birds.load_state_dict(torch.load('generators/generator_flowers.pth'))
+            generator_birds.load_state_dict(torch.load('generators/generator_birds.pth'))
         except FileNotFoundError:
             pass
         generators[1] = generator_birds

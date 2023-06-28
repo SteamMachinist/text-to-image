@@ -1,3 +1,5 @@
+# Код генератора из GAN-CLS.ipynb
+
 import torch
 from torch import nn
 
